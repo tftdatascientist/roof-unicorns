@@ -1,0 +1,54 @@
+---
+import type { Locale } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+
+const storyImages = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuAKXlqwuvBG3in6qmjRCdoaEURpCpZdDtJFawQVyP3nHRR3KnuHJfUfVYliyx6_03dGZCsZM4jsLN_OkLozpXkguiyxNtDwXfNjympvQsuhCY5iXON48K4EafS7HzBnZAj_tly4J86Pt8KxNb2s5TzzckoOD_ZfU4sd-ytIXhExrs_fOUmKit6WHuhbBay6_Gn-zrm6z-FfRCMpQhO3-RhvXd9YArt11T5OpILYVXvP3DJDCCDLmRKjuL8OvWHfkScce9h5bCc21vU",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuA65g4-ebboFcYs-IRlvd9SAHmzCXqEVTnteuiBk637QQTakvPGLBO0e7B2oEpVyOaalrjKPYFekanaQqTeycSbo1cXVPd1lInW_7YlCdCZPZnTdov7u87oTTTo3iYaBcDZqvU4GraW-am4RdVI9G8b_l8LNQx5PoncVmpps6NTXTmF5-K9dXdeXr-FC6DEHxO9ThcjJIo24Ao-OV4wJXLdf2VnXm1X89cSX1WR2p-wAjKyb5LprSpOkOgT16XApl9GjdQU2rqX-Xs"
+];
+
+const accentColors = ["text-secondary", "text-primary"];
+const lineColors = ["bg-secondary", "bg-primary"];
+---
+
+<section class="py-32 px-8 bg-surface overflow-hidden" id="rooftop">
+  <div class="max-w-7xl mx-auto space-y-40">
+    {t.rooftop.stories.map((story, i) => (
+      <div class={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-24`}>
+        <div class="w-full md:w-1/2 relative">
+          <div class={`absolute -inset-4 ${i % 2 === 0 ? 'bg-secondary/10' : 'bg-primary/10'} blur-2xl rounded-full`}></div>
+          <div class="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+            <img alt={story.imgAlt} class="w-full h-full object-cover" src={storyImages[i]} />
+          </div>
+        </div>
+        <div class={`w-full md:w-1/2 space-y-6 ${i % 2 === 0 ? '' : 'text-left md:text-right'}`}>
+          <span class={`${accentColors[i]} font-headline tracking-[0.3em] uppercase`}>{story.tag}</span>
+          <h2 class="font-headline text-4xl md:text-6xl uppercase tracking-tighter leading-none">{story.title1} <br />{story.title2}</h2>
+          <p class="text-on-surface-variant font-body text-lg leading-relaxed">
+            {story.text}
+          </p>
+          <div class={`pt-4 flex items-center ${i % 2 === 0 ? '' : 'justify-end'} gap-4 group cursor-pointer`}>
+            {i % 2 === 0 ? (
+              <>
+                <div class={`w-12 h-1 ${lineColors[i]} group-hover:w-20 transition-all duration-300`}></div>
+                <span class={`font-headline uppercase text-sm tracking-widest ${accentColors[i]}`}>{story.link}</span>
+              </>
+            ) : (
+              <>
+                <span class={`font-headline uppercase text-sm tracking-widest ${accentColors[i]}`}>{story.link}</span>
+                <div class={`w-12 h-1 ${lineColors[i]} group-hover:w-20 transition-all duration-300`}></div>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

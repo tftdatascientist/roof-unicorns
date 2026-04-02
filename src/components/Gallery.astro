@@ -1,0 +1,41 @@
+---
+import type { Locale } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+
+const galleryImages = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuANqzOFz8yJrp88B083ngGxYGy1bf6qdT0nEBnB4o0838w7eNz8EAbhGGWkNpy213GBvrB-eFnWOvKzFc_XCE5nTThidcf1MuSQZSgX9244cHeV9s-LFGix_aDpaIQnUYo2ZktPPDWW4GPbiDu0xqft2VPvs4ULHKOa3j-OmwO10a0d76NRyuVetBCB82p6QJuU9c5gGGQcwJPTF4LzY_BOmQz-QjJoC8M8i7UoaLeaXjxPrf0qYBVHVhO0r7e9cCMbtWnVhXIZR94",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCr8IIGX0w9y6j5JtYqMNDYxm0mjMY6MzmddhOKlFU20njHffjy1fKgidrG9IwwrFxWU87ITOO7nGmMlPFWu7mCg6o1EOT3t6rj_GR9Bej1yOfYWlZTxN1WRtR-Xa_H8wJ4h8Qdt__B94KxMhoDddbmvvF5Pc_TlflS3uufpcUWVNNgjIhldtWW_k9T8rr61dxZDRcpzbQVEXLSRh3DKVpFSOTa2HsK20aCS-g5yb0GNIcxMHEeYlp7o07TIz62mgJERZwLwEd2RhY",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCvTChsH2dwxCKtseCaotqyMBUhzsOl9J6u14yqBupTJySUZcZtwvGC_ObvOb7ZWGJt9zSNK1fWk4z0Mhnm4A-9PQomMyF2tt-F1FwDAK0_D4Y5S7HbkCKAWbYdooYNMigi7q7HHh0tEElr_C4I9b226AZdQOom065ChI50NC-3dcA6C-K7u9U5KEB75c2r0bPfddxCtflyyMka8F7rxceQhkspqI01WhPxk7BKByooozqvkOcVKmqNAvh7OnQx4Jj93oeW391M2mI",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuDKQ3fYkgS5JcCUQLDoJVXd_LgVhKU2ALtumkkq8-52BJ7GObu9TrnlBfcpbaXsr5zB7jyvY7XneczynyaYuTo6qIpDbN2PKH2-O3bA840I1emWmEqnWB3mXDcR1UFKLmgxe_bKuF3DUCXIQ43BJEtJ8jdmwYGJanlCD-SnWB9x9j-UfdwPK2969eoDPE6t1BmtoHdDARA8T6h28X58Uqm9bbiDV5b91JziWtOfbqtGLAqulx8XwSnEDdDom5v15o-NKMm_vb5UV5o"
+];
+---
+
+<section class="py-32 px-8 bg-surface-container-low" id="gallery">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-20 flex justify-between items-end">
+      <h2 class="font-headline text-4xl md:text-6xl font-black uppercase tracking-tighter">{t.gallery.title}</h2>
+      <p class="font-body text-on-surface-variant max-w-xs text-right">{t.gallery.subtitle}</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {t.gallery.cards.map((card, i) => (
+        <div class="group relative bg-surface-container rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2">
+          <div class="aspect-[4/5] overflow-hidden">
+            <img alt={card.imgAlt} class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale-fixed hover:grayscale-0" src={galleryImages[i]} />
+          </div>
+          <div class="p-6 bg-surface-container">
+            <span class="text-xs font-headline tracking-widest text-primary uppercase">{card.role}</span>
+            <h3 class="font-headline text-xl mt-1 uppercase">{card.name}</h3>
+          </div>
+          <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+{
+  "site": {
+    "title": "ROOF UNICORNS | Extraordinary Ambitions",
+    "lang": "en"
+  },
+  "nav": {
+    "brand": "ROOF UNICORNS",
+    "gallery": "Gallery",
+    "unicornDay": "Unicorn of the Day",
+    "catsTrap": "Cats-trap Story",
+    "rooftop": "Rooftop Stories",
+    "langSwitch": "PL/EN",
+    "langUrl": "/"
+  },
+  "hero": {
+    "imgAlt": "Visionary Cat",
+    "line1": "ORDINARY CATS.",
+    "line2": "EXTRAORDINARY AMBITIONS.",
+    "scroll": "Scroll"
+  },
+  "gallery": {
+    "title": "The Gallery",
+    "subtitle": "The initial visionaries who defied the laws of physics and gravity.",
+    "cards": [
+      {
+        "role": "Visionary",
+        "name": "Luna Tech",
+        "imgAlt": "Founder Cat"
+      },
+      {
+        "role": "Disruptor",
+        "name": "Pixel Paws",
+        "imgAlt": "Disruptor Cat"
+      },
+      {
+        "role": "Growth",
+        "name": "Scale Whisker",
+        "imgAlt": "Growth Cat"
+      },
+      {
+        "role": "Architect",
+        "name": "Void Logic",
+        "imgAlt": "Architect Cat"
+      }
+    ]
+  },
+  "unicornOfDay": {
+    "badge": "Unicorn of the Day",
+    "button": "Read the Thesis",
+    "unicorns": [
+      {
+        "name": "Barnaby \"Moonshot\"",
+        "title": "CEO of MEOWAI",
+        "quote": "\"We aren't just chasing laser pointers; we're building the laser pointers of the future.\""
+      },
+      {
+        "name": "Luna \"Stargazer\"",
+        "title": "CTO of PurrTech",
+        "quote": "\"Every rooftop is a trampoline — you just need to know when to jump.\""
+      },
+      {
+        "name": "Pixel \"Disrupto\"",
+        "title": "Founder of NapStack",
+        "quote": "\"Napping isn't laziness — it's creative process optimization.\""
+      },
+      {
+        "name": "Whiskers \"The Brain\"",
+        "title": "VP of FishCoin",
+        "quote": "\"The fish market is like a ball of yarn — tangled, but full of opportunity.\""
+      },
+      {
+        "name": "Cleo \"Velvet\"",
+        "title": "CMO of CatNipDAO",
+        "quote": "\"Marketing is purring — subtle, but impossible to ignore.\""
+      }
+    ]
+  },
+  "catsTrap": {
+    "title": "The Cats-Trap Story",
+    "subtitle": "From humble alleyways to high-valuation skyscrapers. Meet the elite minds behind the movement.",
+    "founders": [
+      {
+        "name": "Sir Whiskers III",
+        "role": "CEO • $42M in sardines",
+        "bio": "\"Pioneered the 'If I fits, I sits' logistics model, optimizing last-mile delivery through cardboard boxes.\"",
+        "imgAlt": "Sir Whiskers III"
+      },
+      {
+        "name": "Mruczek von Dach",
+        "role": "CTO • $12M in tuna",
+        "bio": "\"Architected the world's first decentralized catnip delivery network using rooftop jumps and nocturnal navigation.\"",
+        "imgAlt": "Mruczek von Dach"
+      },
+      {
+        "name": "Princess Fluffernutter",
+        "role": "VC • $88M in catnip",
+        "bio": "\"Known for her 'tough love' approach to seed funding. Only invests in cats with high jump metrics and low nap-to-work ratios.\"",
+        "imgAlt": "Princess Fluffernutter"
+      }
+    ]
+  },
+  "rooftop": {
+    "stories": [
+      {
+        "tag": "The Ascent",
+        "title1": "High-Altitude",
+        "title2": "Negotiations",
+        "text": "The journey to unicorn status began on the cold slate of the East Side lofts. For Apollo, it wasn't about the view; it was about the signal strength. By bridging the gap between satellite dishes, he created the first cross-city feline communication protocol.",
+        "link": "Discover More",
+        "imgAlt": "Rooftop Ascent"
+      },
+      {
+        "tag": "The Network",
+        "title1": "Decoding",
+        "title2": "The Night",
+        "text": "While the world slept, Selina was building. Her nocturnal algorithms predicted the 2023 fish market crash three weeks before the first tremor. She doesn't use the cloud; she owns the sky.",
+        "link": "Discover More",
+        "imgAlt": "Cyber Cat"
+      }
+    ]
+  },
+  "footer": {
+    "headline": "100% UNICORN",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

@@ -1,0 +1,60 @@
+---
+import type { Locale } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto shadow-[0_0_20px_rgba(132,85,239,0.15)]">
+  <div class="text-2xl font-black tracking-tighter text-[#ba9eff] font-['Epilogue'] uppercase">
+    {t.nav.brand}
+  </div>
+  <div class="hidden md:flex items-center space-x-8">
+    <a class="text-[#ba9eff] border-b-2 border-[#ba9eff] pb-1 font-['Manrope'] text-sm hover:text-[#ec63ff] transition-colors duration-300" href="#gallery">{t.nav.gallery}</a>
+    <a class="text-[#adaaaa] font-['Manrope'] text-sm hover:text-[#ec63ff] transition-colors duration-300" href="#unicorn-day">{t.nav.unicornDay}</a>
+    <a class="text-[#adaaaa] font-['Manrope'] text-sm hover:text-[#ec63ff] transition-colors duration-300" href="#cats-trap">{t.nav.catsTrap}</a>
+    <a class="text-[#adaaaa] font-['Manrope'] text-sm hover:text-[#ec63ff] transition-colors duration-300" href="#rooftop">{t.nav.rooftop}</a>
+  </div>
+  <div class="flex items-center gap-4">
+    <a href={t.nav.langUrl} class="font-['Epilogue'] tracking-tighter uppercase text-[#ba9eff] cursor-pointer scale-95 active:scale-90 transition-transform">
+      {t.nav.langSwitch}
+    </a>
+    <button id="burger-btn" class="md:hidden text-[#ba9eff] focus:outline-none" aria-label="Menu">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-[#0e0e0e]/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 hidden">
+  <a class="text-[#ba9eff] font-['Manrope'] text-2xl hover:text-[#ec63ff] transition-colors duration-300" href="#gallery" data-mobile-link>{t.nav.gallery}</a>
+  <a class="text-[#adaaaa] font-['Manrope'] text-2xl hover:text-[#ec63ff] transition-colors duration-300" href="#unicorn-day" data-mobile-link>{t.nav.unicornDay}</a>
+  <a class="text-[#adaaaa] font-['Manrope'] text-2xl hover:text-[#ec63ff] transition-colors duration-300" href="#cats-trap" data-mobile-link>{t.nav.catsTrap}</a>
+  <a class="text-[#adaaaa] font-['Manrope'] text-2xl hover:text-[#ec63ff] transition-colors duration-300" href="#rooftop" data-mobile-link>{t.nav.rooftop}</a>
+  <button id="close-menu-btn" class="absolute top-4 right-8 text-[#ba9eff]" aria-label="Close menu">
+    <span class="material-symbols-outlined text-3xl">close</span>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const burgerBtn = document.getElementById('burger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileLinks = document.querySelectorAll('[data-mobile-link]');
+
+    function toggleMenu() {
+      mobileMenu?.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    }
+
+    burgerBtn?.addEventListener('click', toggleMenu);
+    closeMenuBtn?.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+  });
+</script>

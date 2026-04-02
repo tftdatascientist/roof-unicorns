@@ -1,0 +1,41 @@
+---
+import type { Locale } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+
+const founderImages = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuA-NN9DdQ__To-QZFgYGXr8vOYAkfR9g8yUzZ2WmEDggV388HyJLYgMOEd0cvFGfaLHNZknIcSHXtdjSULmE3GHx43XDyvx8dtE9kpPoD0ZL1P4MJsItIkBo6WHGqL8E5T5KGm_HkLwoD5vy08GN0gOv8l51z5LkylBQkZpuzzTAuvyZY68H7-SPDGEKHYQJWBt9xg6suvB3lVTQSgU2LBwuo89dkSIZf55wpBrym9wXhOcJTds1Xwp8iXbo5MRsl23zqJ3U2zR_t0",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCOoopnf2zVkkDocVWBnt4j70JC8EF3p1wqZ9k5U1ubm51a46ni_7Mx3UK6zcPEO18vH74Jv1V40iNMnKXIslJXztSc0nHLoH-tRszp9pnK-AwvxjUKMlz4-VpjKZQ7j872lIZBcUc_mpsJzIUCARm8R44IEgpB0f-nIaI8WeitLb-FCdfZlUbVCvP3QOtmLuwxOcnJiDqxY3drkASVQYYYemUZ5bPVPtuAOTptvnS2o_bT5DsL1NXpP3lxFzoNNzgPXK6KVZm0j9I",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuDkBkvEaPVWsOSMLgb_DsPSVTMNEnIZo04zkuG9s6rRMw992vi480KRsyiicOzmzA1FJW7ZCMFiGp7pZTerA1GkhuagPH3tIQbtuawz0nY7iVUaFnnEqa7wn13ReGNconLLJSWyD0rGCeRjj3T3Xv_4uQPNDVou-YkjVCuq4QTgjqRaXpHP7KAcDn1v8v9i0_uNKBkfTaZMp_48mdapW09NkKE0Itoz1RRjF-MA4BhQqIFaa77MGWyG4BEUbDboVU0zTzMvc-asKN4"
+];
+
+const roleColors = ["text-tertiary", "text-secondary", "text-primary"];
+const borderHoverColors = ["hover:border-primary/30", "hover:border-secondary/30", "hover:border-tertiary/30"];
+---
+
+<section class="py-32 px-8 bg-surface-container-low" id="cats-trap">
+  <div class="max-w-7xl mx-auto space-y-16">
+    <div class="text-center space-y-4">
+      <h2 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter">{t.catsTrap.title}</h2>
+      <p class="text-on-surface-variant max-w-2xl mx-auto font-body">{t.catsTrap.subtitle}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {t.catsTrap.founders.map((founder, i) => (
+        <div class={`bg-surface-container rounded-2xl p-8 border border-white/5 ${borderHoverColors[i]} transition-all duration-300`}>
+          <div class="w-20 h-20 bg-surface-container-highest rounded-full mb-8 overflow-hidden">
+            <img alt={founder.imgAlt} class="w-full h-full object-cover" src={founderImages[i]} />
+          </div>
+          <h3 class="font-headline text-2xl uppercase">{founder.name}</h3>
+          <p class={`${roleColors[i]} font-headline text-sm tracking-widest mt-1 mb-6 uppercase`}>{founder.role}</p>
+          <p class="text-on-surface-variant font-body leading-relaxed">{founder.bio}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

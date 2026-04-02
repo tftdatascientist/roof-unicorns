@@ -1,0 +1,127 @@
+{
+  "site": {
+    "title": "ROOF UNICORNS | Niezwykłe Ambicje",
+    "lang": "pl"
+  },
+  "nav": {
+    "brand": "ROOF UNICORNS",
+    "gallery": "Galeria",
+    "unicornDay": "Jednorożec Dnia",
+    "catsTrap": "Kocia Pułapka",
+    "rooftop": "Dachowe Historie",
+    "langSwitch": "PL/EN",
+    "langUrl": "/en/"
+  },
+  "hero": {
+    "imgAlt": "Wizjonerski Kot",
+    "line1": "ZWYKŁE KOTY.",
+    "line2": "NIEZWYKŁE AMBICJE.",
+    "scroll": "Przewiń"
+  },
+  "gallery": {
+    "title": "Galeria",
+    "subtitle": "Pierwsi wizjonerzy, którzy rzucili wyzwanie prawom fizyki i grawitacji.",
+    "cards": [
+      {
+        "role": "Wizjoner",
+        "name": "Luna Tech",
+        "imgAlt": "Kot Wizjoner"
+      },
+      {
+        "role": "Innowator",
+        "name": "Pixel Paws",
+        "imgAlt": "Kot Innowator"
+      },
+      {
+        "role": "Wzrost",
+        "name": "Scale Whisker",
+        "imgAlt": "Kot Wzrostowy"
+      },
+      {
+        "role": "Architekt",
+        "name": "Void Logic",
+        "imgAlt": "Kot Architekt"
+      }
+    ]
+  },
+  "unicornOfDay": {
+    "badge": "Jednorożec Dnia",
+    "button": "Przeczytaj Tezę",
+    "unicorns": [
+      {
+        "name": "Barnaby \"Moonshot\"",
+        "title": "CEO MEOWAI",
+        "quote": "\"Nie gonimy tylko za wskaźnikami laserowymi; budujemy wskaźniki laserowe przyszłości.\""
+      },
+      {
+        "name": "Luna \"Stargazer\"",
+        "title": "CTO PurrTech",
+        "quote": "\"Każdy dach to trampolina — trzeba tylko wiedzieć, kiedy skoczyć.\""
+      },
+      {
+        "name": "Pixel \"Disrupto\"",
+        "title": "Founder NapStack",
+        "quote": "\"Drzemka to nie lenistwo — to optymalizacja procesów kreatywnych.\""
+      },
+      {
+        "name": "Whiskers \"The Brain\"",
+        "title": "VP FishCoin",
+        "quote": "\"Rynek rybny jest jak kłębek wełny — splątany, ale pełen możliwości.\""
+      },
+      {
+        "name": "Cleo \"Velvet\"",
+        "title": "CMO CatNipDAO",
+        "quote": "\"Marketing to mruczenie — subtelne, ale nie do zignorowania.\""
+      }
+    ]
+  },
+  "catsTrap": {
+    "title": "Historia Kociej Pułapki",
+    "subtitle": "Od skromnych zaułków po wieżowce o wysokiej wycenie. Poznaj elitarne umysły stojące za ruchem.",
+    "founders": [
+      {
+        "name": "Sir Whiskers III",
+        "role": "CEO • 42M$ w sardynkach",
+        "bio": "\"Pionier modelu logistycznego 'Jeśli się mieszczę, to siadam', optymalizujący dostawę ostatniej mili przez pudła kartonowe.\"",
+        "imgAlt": "Sir Whiskers III"
+      },
+      {
+        "name": "Mruczek von Dach",
+        "role": "CTO • 12M$ w tuńczyku",
+        "bio": "\"Zaprojektował pierwszą na świecie zdecentralizowaną sieć dostawy kocimiętki, wykorzystując skoki po dachach i nawigację nocną.\"",
+        "imgAlt": "Mruczek von Dach"
+      },
+      {
+        "name": "Księżniczka Puszystość",
+        "role": "VC • 88M$ w kocimiętce",
+        "bio": "\"Znana z podejścia 'twarda miłość' do finansowania zalążkowego. Inwestuje tylko w koty z wysokimi wskaźnikami skoków i niskim stosunkiem drzemek do pracy.\"",
+        "imgAlt": "Księżniczka Puszystość"
+      }
+    ]
+  },
+  "rooftop": {
+    "stories": [
+      {
+        "tag": "Wspinaczka",
+        "title1": "Wysokościowe",
+        "title2": "Negocjacje",
+        "text": "Droga do statusu jednorożca zaczęła się na zimnym łupku loftów po wschodniej stronie. Dla Apollo nie chodziło o widok; chodziło o siłę sygnału. Łącząc anteny satelitarne, stworzył pierwszy międzymiastowy protokół komunikacji kociej.",
+        "link": "Dowiedz się więcej",
+        "imgAlt": "Dachowa Wspinaczka"
+      },
+      {
+        "tag": "Sieć",
+        "title1": "Dekodowanie",
+        "title2": "Nocy",
+        "text": "Kiedy świat spał, Selina budowała. Jej nocne algorytmy przewidziały krach na rynku rybnym w 2023 roku na trzy tygodnie przed pierwszym wstrząsem. Nie korzysta z chmury; jest właścicielką nieba.",
+        "link": "Dowiedz się więcej",
+        "imgAlt": "Cyber Kot"
+      }
+    ]
+  },
+  "footer": {
+    "headline": "100% JEDNOROŻEC",
+    "privacy": "Polityka Prywatności",
+    "terms": "Regulamin"
+  }
+}

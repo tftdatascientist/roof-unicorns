@@ -1,0 +1,30 @@
+---
+import type { Locale } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<section class="relative h-screen flex flex-col items-center justify-center bg-surface text-center px-6 overflow-hidden">
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+  </div>
+  <div class="relative z-10 space-y-12 max-w-5xl">
+    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-outline-variant grayscale-fixed shadow-2xl">
+      <img alt={t.hero.imgAlt} class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZm3ij3T6v9yxdR6rOrfuS8-VArSIkAdNpL-hwTySCys2JDKykZVsuYmF--VjMqbLqLK_Ke9akBIlwOUNGtcGL-qiJNl_saRDFtz35Anzw_bto6rl4vuEr9fOUB5KhLPxLZo-R-2isgxSefUuNYHsUHA0vfhSPUphG9kGXRppx-ukuqUtAriybAuzAR4X1QsLPgQoDhyrPpG3TQQ47a7CPxSFYjv2YiPDVuACclESF_rqYiiVD_H6VbbrMMQWzCvulBvwI-rzJsP0" />
+    </div>
+    <h1 class="font-headline text-5xl md:text-8xl font-black tracking-tighter text-on-surface leading-none uppercase">
+      {t.hero.line1}<br />
+      <span class="text-on-surface-variant">{t.hero.line2}</span>
+    </h1>
+  </div>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 opacity-50">
+    <span class="text-[10px] font-headline tracking-[0.3em] uppercase">{t.hero.scroll}</span>
+    <span class="material-symbols-outlined animate-bounce">arrow_downward</span>
+  </div>
+</section>
